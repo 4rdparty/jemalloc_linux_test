@@ -1,0 +1,23 @@
+load("@rules_cc//cc:defs.bzl", "cc_test")
+
+cc_test(
+    name = "eventuals",
+    srcs = [
+        "eventual.cc",
+        "stream.cc",
+        "lock.cc",
+        "repeat.cc",
+        "then.cc",
+        "conditional.cc",
+        "callback.cc",
+        "static-thread-pool.cc",
+        "task.cc",
+        "closure.cc",
+        "libuv.cc",
+        "static-thread-pool-parallel.cc",
+    ],
+    deps = [
+        "//:eventuals",
+        "@com_github_google_googletest//:gtest_main",
+    ],
+)
